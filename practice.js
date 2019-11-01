@@ -95,14 +95,22 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 function evenFinder(nums){
   let newArr = []
   for (let i = 0; i < nums.length; i++){
-     if (nums[i] % 2 === 0 && nums[i] !== 0) {
+     if (nums[i] % 2 === 0) {
        newArr.push(nums[i])
      }
     }
-    console.log(newArr)
     return newArr
 }
 console.log(evenFinder(nums))
+// function evenFinder(nums){
+//   var evens = []
+//   for (let i = 0; i < nums.length; i++){
+//     if (nums[i] % 2 === 0){
+//       evens.push(nums[i])
+//     }
+//   }
+//   return evens;
+//  };
 
 
 
@@ -181,8 +189,27 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
-
+function removeItem(myGroceryList, item) {
+  let newArr = []
+  if(myGroceryList && item) {
+    for (let i = 0; i < myGroceryList.length; i++) {
+       if (myGroceryList[i] === item) {
+         myGroceryList.splice(i, 1)
+       }
+     }return myGroceryList
+  } else {
+    return newArr
+  }
+}
+function addItem(myGroceryList, item) {
+  let newArr = []
+  if (myGroceryList && item) {
+    myGroceryList.push(item)
+    return myGroceryList
+  } else {
+    return newArr
+  }
+}
 
 ////////// PROBLEM 9 //////////
 
